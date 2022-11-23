@@ -1,0 +1,49 @@
+#h 
+{
+  background-color: #ffcb00; 
+  font-size: 20px;
+  padding: 1px;
+}
+#one,#two,#three,#four,#five,#six,#seven,#eight
+{
+    background-color:brown;
+    padding: 15px;
+    width: 200px;
+    color: white;
+}
+#create
+{
+    position: relative;
+    margin-left: 150px;
+}
+.Cmain
+{
+    display:flex;
+}
+.Cleft
+{
+    width: 20%;
+}
+.Cright
+{
+    padding-top: 40px;
+    padding-left: 150px;
+    width:50%;
+}
+#one:hover,#two:hover,#three:hover,#four:hover,#five:hover,#six:hover,#seven:hover,#eight:hover
+{
+    background-color: green;
+}
+#submit,#reset
+{
+    padding: 5px;
+    width:100px;
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+#f
+{
+  background-color:#ffcb00;
+  padding: 3px 0;
+}

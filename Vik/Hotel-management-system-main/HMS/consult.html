@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online consultation</title>
+    <link rel="stylesheet" href="consult.css">
+</head>
+<body>
+    <h1>Online Doctor Consultation</h1>
+    <div class="b">
+        <h2>search for doctors</h2>
+        <input id="search" type="search" placeholder="Search for doctors or specialities" required>
+        <h3>Tell us symptoms for quick assesment and get appropiate care.</h3>
+        <h3>click on the symptoms which you have</h3>
+        <p>
+        <img id="a" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\cough.jpg">
+        <img id="b" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\fever.png">
+        <img id="c" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\hedache.png">
+        <img id="d" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\sore.png"> 
+        <img id="e" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\dysp.jpg">
+        </p>
+        <h3>enter your mail for further details  <input id="email" style="height: 25px;width: 200px;" type="email" placeholder="Username@gmail.com" required></h3>
+        <h3 id="bb" style="padding-top: 40px;">submit details<a id="ss"href="#"><input id="but" onclick="check()" style="height: 25px;width:80px;font-size:large;margin-left: 20px;padding-left: 3px;" type="submit"></a></h3>
+
+        <div class="footer">
+            <h3>© 2022 Hospital Management System Systems, Inc. All Rights Reserved.</h3>
+        </div>
+    </div>
+    <script>
+        c=1;
+        function ok(id){
+            if(c%2!=0){
+                document.getElementById(id).style.borderColor="blue";
+                c+=1;
+            }
+            else{
+                document.getElementById(id).style.borderColor="red";
+                c+=1;
+            }    
+        }
+        function check(){
+            var s=document.getElementById("email");
+            var k=document.getElementById("search");
+            if(s.value=="" || k.value==""){
+                alert("please fill all the details..");
+            }
+            else{
+                var s=document.getElementsByClassName("b");
+                s[0].style.fontSize="40px";
+                s[0].style.marginLeft="400px";
+                s[0].style.marginTop="200px";
+                s[0].innerHTML="THANKS FOR CONSULTING..<br>CHECK YOUR MAIL FOR FURTHER DETAILS.";
+            }
+        }
+    </script>
+</body>
+
+</html>

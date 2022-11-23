@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medicines</title>
+    <link rel="stylesheet" href="medic.css">
+</head>
+<body>
+    <h1>BUY ONLINE MEDICINES</h1>
+    <div class="b">
+        <h2>SHOP BY CATEGORY</h2>
+        <h3>select the category which you want to buy on clicking below category</h3>
+        <p>
+            <img id="a" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\babycare.jpg">
+            <img id="b" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\health.jpg">
+            <img id="c" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\women.png">
+            <img id="d" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\ayur.jpg"> 
+            <img id="e" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\homeess.png">
+            <img id="f" onclick="ok(this.id)" src="C:\Users\tharun chelika\OneDrive\Desktop\covid.png">
+        </p>
+        <h3 id="h">enter the medicie from selected category</h3>
+        <input id="medi" style="height: 25px;width: 300px;"type="text" placeholder="enter the medecines" required><br>
+        <p style="margin-top: 85px;"><a id="buy" href="#"><input style="height: 30px;width:80px;font-size:large;margin-left: 20px;" onclick="check()" id="ab" type="submit"></a></p>
+        <div class="footer">
+            <h3>© 2022 Hospital Management System Systems, Inc. All Rights Reserved.</h3>
+        </div>
+    </div>
+    <script>
+        c=1;
+        function ok(id){
+            if(c%2!=0){
+                document.getElementById(id).style.borderColor="blue";
+                c+=1;
+            }
+            else{
+                document.getElementById(id).style.borderColor="red";
+                c+=1;
+            }    
+        }
+        function check(){
+            var k=document.getElementById("medi");
+            if(k.value==""){
+                alert("please enter the medicines");
+            }
+            else{
+                var s=document.getElementsByClassName("b");
+                s[0].style.fontSize="40px";
+                s[0].style.marginLeft="500px";
+                s[0].style.marginTop="200px";
+                s[0].innerHTML="THANKS FOR BUYING..";
+            }
+        }
+    </script>
+</body>
+</html>

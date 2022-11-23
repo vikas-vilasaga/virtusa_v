@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB TESTS</title>
+    <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+    <h1>BOOK YOUR TEST</h1>
+    <div class="lab">
+        <h2>Fill The Details.</h2>
+        <input type="text" placeholder="Name" required><br>
+        <input type="email" placeholder="Username@gmail.com" required><br>
+        <input type="text" placeholder="Mobile Number" required><br>
+        <input type="text" placeholder="Test Name" required><br>
+        <input id="a" type="date" placeholder="" required><br>
+        <select >
+            <option>select state</option>
+            <option>Telanagana</option>
+            <option>Andhra Pradesh</option>
+            <option>Assam</option>
+            <option>Gujarat</option>
+            <option>Maharashtra</option>
+            <option>Rajasthan</option>
+            <option>West Bengal</option>
+        </select>
+        <select >
+            <option>select city</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+            <option>Chennai</option>
+            <option>Banglore</option>
+            <option>Ahmedabad</option>
+            <option>Pune</option>
+        </select>
+        <a id="c" href="#"><input id="b" onclick="check()" type="submit"></a>
+        <p style="font-size:large;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*All fields are mandatory.
+            Home sample collection charges will be applicable.
+        </p>
+    </div>
+    <div class="footer">
+        <h3>© 2022 Hospital Management System Systems, Inc. All Rights Reserved.</h3>
+    </div>
+    <script>
+        function ok(){
+            var ar=document.getElementsByTagName("input");
+            for(var i=0;i<4;i++){
+                if(i==2){
+                    var x =String(ar[i].value);
+                    if(x.length < 10){
+                        
+                        return false;
+                    }
+                }
+                else if(ar[i].value==""){
+                    return false;
+                }
+            }
+            var s=document.getElementsByTagName("select")
+            if((s[0].value=="select state") || (s[1].value=="select city")){
+                return;
+            }
+            
+            var d=document.getElementById("a");
+            if(d.value==""){
+                alert("please select the date..");
+                return;
+            }
+
+            return true;
+        }
+        function check(){
+            if(ok()){
+                var s=document.getElementsByClassName("lab");
+                s[0].style.height="300px"
+                s[0].style.fontSize="20px";
+                s[0].style.marginLeft="400px";
+                s[0].style.marginTop="20px";
+                s[0].style.paddingTop="200px";
+                s[0].style.paddingLeft="200px"
+                
+                s[0].innerHTML="YOUR TEST IS BOOKED.. <br>CHECK YOUR EMAIL FOR FURTHER DETAILS..";
+                s[0].innerHTML.style.marginTop="50px";
+            }
+            else{
+                alert("please fill all the details..");
+            }
+        }
+    </script>
+</body>
+</html>
