@@ -1,4 +1,4 @@
-# min no of platforms required.
+// # min no of platforms required.
 using System;
 public class prob {	
 	public static int findPlatform(int[] arr, int[] dep,int n)
